@@ -9,23 +9,43 @@
 /* Begin PBXBuildFile section */
 		0465B0012AF58B41003F3D30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0002AF58B41003F3D30 /* AppDelegate.swift */; };
 		0465B0032AF58B41003F3D30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0022AF58B41003F3D30 /* SceneDelegate.swift */; };
-		0465B0052AF58B41003F3D30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0042AF58B41003F3D30 /* ViewController.swift */; };
-		0465B0082AF58B41003F3D30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0465B0062AF58B41003F3D30 /* Main.storyboard */; };
 		0465B00B2AF58B41003F3D30 /* WeatherAston.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0092AF58B41003F3D30 /* WeatherAston.xcdatamodeld */; };
 		0465B00D2AF58B42003F3D30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0465B00C2AF58B42003F3D30 /* Assets.xcassets */; };
 		0465B0102AF58B42003F3D30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0465B00E2AF58B42003F3D30 /* LaunchScreen.storyboard */; };
+		0465B0182AF58CCD003F3D30 /* WeatherTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0172AF58CCD003F3D30 /* WeatherTabBarViewController.swift */; };
+		0465B01F2AF590B0003F3D30 /* TodayModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B01E2AF590B0003F3D30 /* TodayModuleAssembly.swift */; };
+		0465B0222AF5915F003F3D30 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0212AF5915F003F3D30 /* TodayViewController.swift */; };
+		0465B0242AF59234003F3D30 /* TodayViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0232AF59234003F3D30 /* TodayViewOutput.swift */; };
+		0465B0262AF59267003F3D30 /* TodayViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0252AF59267003F3D30 /* TodayViewInput.swift */; };
+		0465B0282AF592FA003F3D30 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0272AF592FA003F3D30 /* TodayViewModel.swift */; };
+		0465B02D2AF596CF003F3D30 /* TabBarModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */; };
+		04E339C52AFE15AC0099FB20 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */; };
+		04E339C72AFE15FA0099FB20 /* FavoritesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */; };
+		04E339C92AFE164F0099FB20 /* FavoritesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */; };
+		04E339CB2AFE16920099FB20 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339CA2AFE16920099FB20 /* FavoritesViewController.swift */; };
+		04E339CD2AFE171E0099FB20 /* FavoritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339CC2AFE171E0099FB20 /* FavoritesAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0465AFFD2AF58B41003F3D30 /* WeatherAston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAston.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0465B0002AF58B41003F3D30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0465B0022AF58B41003F3D30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0465B0042AF58B41003F3D30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0465B0072AF58B41003F3D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0465B00A2AF58B41003F3D30 /* WeatherAston.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherAston.xcdatamodel; sourceTree = "<group>"; };
 		0465B00C2AF58B42003F3D30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0465B00F2AF58B42003F3D30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0465B0112AF58B42003F3D30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0465B0172AF58CCD003F3D30 /* WeatherTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTabBarViewController.swift; sourceTree = "<group>"; };
+		0465B01E2AF590B0003F3D30 /* TodayModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayModuleAssembly.swift; sourceTree = "<group>"; };
+		0465B0212AF5915F003F3D30 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		0465B0232AF59234003F3D30 /* TodayViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewOutput.swift; sourceTree = "<group>"; };
+		0465B0252AF59267003F3D30 /* TodayViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewInput.swift; sourceTree = "<group>"; };
+		0465B0272AF592FA003F3D30 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
+		0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleAssembly.swift; sourceTree = "<group>"; };
+		04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewInput.swift; sourceTree = "<group>"; };
+		04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewOutput.swift; sourceTree = "<group>"; };
+		04E339CA2AFE16920099FB20 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		04E339CC2AFE171E0099FB20 /* FavoritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +78,130 @@
 		0465AFFF2AF58B41003F3D30 /* WeatherAston */ = {
 			isa = PBXGroup;
 			children = (
-				0465B0002AF58B41003F3D30 /* AppDelegate.swift */,
-				0465B0022AF58B41003F3D30 /* SceneDelegate.swift */,
-				0465B0042AF58B41003F3D30 /* ViewController.swift */,
-				0465B0062AF58B41003F3D30 /* Main.storyboard */,
+				0465B01A2AF58F87003F3D30 /* ApplicationLayer */,
+				0465B0192AF58F4A003F3D30 /* PresentationLayer */,
 				0465B00C2AF58B42003F3D30 /* Assets.xcassets */,
 				0465B00E2AF58B42003F3D30 /* LaunchScreen.storyboard */,
 				0465B0112AF58B42003F3D30 /* Info.plist */,
 				0465B0092AF58B41003F3D30 /* WeatherAston.xcdatamodeld */,
 			);
 			path = WeatherAston;
+			sourceTree = "<group>";
+		};
+		0465B0192AF58F4A003F3D30 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0465B0292AF595F0003F3D30 /* TabBarModule */,
+				0465B0202AF590BB003F3D30 /* TodayModule */,
+				04E339BE2AFE14FD0099FB20 /* FavoritesModule */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		0465B01A2AF58F87003F3D30 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0465B0022AF58B41003F3D30 /* SceneDelegate.swift */,
+				0465B0002AF58B41003F3D30 /* AppDelegate.swift */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		0465B01B2AF58FCE003F3D30 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				0465B01E2AF590B0003F3D30 /* TodayModuleAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		0465B01C2AF58FDD003F3D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0465B0212AF5915F003F3D30 /* TodayViewController.swift */,
+				0465B0232AF59234003F3D30 /* TodayViewOutput.swift */,
+				0465B0252AF59267003F3D30 /* TodayViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0465B01D2AF58FF0003F3D30 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0465B0272AF592FA003F3D30 /* TodayViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0465B0202AF590BB003F3D30 /* TodayModule */ = {
+			isa = PBXGroup;
+			children = (
+				0465B01B2AF58FCE003F3D30 /* Assembly */,
+				0465B01C2AF58FDD003F3D30 /* View */,
+				0465B01D2AF58FF0003F3D30 /* ViewModel */,
+			);
+			path = TodayModule;
+			sourceTree = "<group>";
+		};
+		0465B0292AF595F0003F3D30 /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				0465B02A2AF59653003F3D30 /* Assembly */,
+				0465B02B2AF59662003F3D30 /* TabBarController */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		0465B02A2AF59653003F3D30 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		0465B02B2AF59662003F3D30 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				0465B0172AF58CCD003F3D30 /* WeatherTabBarViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		04E339BE2AFE14FD0099FB20 /* FavoritesModule */ = {
+			isa = PBXGroup;
+			children = (
+				04E339C12AFE15350099FB20 /* Assembly */,
+				04E339C02AFE15300099FB20 /* View */,
+				04E339BF2AFE15270099FB20 /* ViewModel */,
+			);
+			path = FavoritesModule;
+			sourceTree = "<group>";
+		};
+		04E339BF2AFE15270099FB20 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04E339C02AFE15300099FB20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */,
+				04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */,
+				04E339CA2AFE16920099FB20 /* FavoritesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04E339C12AFE15350099FB20 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				04E339CC2AFE171E0099FB20 /* FavoritesAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +264,6 @@
 			files = (
 				0465B0102AF58B42003F3D30 /* LaunchScreen.storyboard in Resources */,
 				0465B00D2AF58B42003F3D30 /* Assets.xcassets in Resources */,
-				0465B0082AF58B41003F3D30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,24 +274,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0465B0052AF58B41003F3D30 /* ViewController.swift in Sources */,
 				0465B0012AF58B41003F3D30 /* AppDelegate.swift in Sources */,
+				04E339C52AFE15AC0099FB20 /* FavoritesViewModel.swift in Sources */,
+				04E339CB2AFE16920099FB20 /* FavoritesViewController.swift in Sources */,
 				0465B00B2AF58B41003F3D30 /* WeatherAston.xcdatamodeld in Sources */,
+				0465B0222AF5915F003F3D30 /* TodayViewController.swift in Sources */,
+				04E339CD2AFE171E0099FB20 /* FavoritesAssembly.swift in Sources */,
+				0465B02D2AF596CF003F3D30 /* TabBarModuleAssembly.swift in Sources */,
+				04E339C72AFE15FA0099FB20 /* FavoritesViewInput.swift in Sources */,
+				04E339C92AFE164F0099FB20 /* FavoritesViewOutput.swift in Sources */,
+				0465B0262AF59267003F3D30 /* TodayViewInput.swift in Sources */,
 				0465B0032AF58B41003F3D30 /* SceneDelegate.swift in Sources */,
+				0465B01F2AF590B0003F3D30 /* TodayModuleAssembly.swift in Sources */,
+				0465B0182AF58CCD003F3D30 /* WeatherTabBarViewController.swift in Sources */,
+				0465B0242AF59234003F3D30 /* TodayViewOutput.swift in Sources */,
+				0465B0282AF592FA003F3D30 /* TodayViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0465B0062AF58B41003F3D30 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0465B0072AF58B41003F3D30 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0465B00E2AF58B42003F3D30 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,9 +430,9 @@
 				DEVELOPMENT_TEAM = J2838ZD25V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherAston/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,9 +442,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aminov.WeatherAston;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,9 +461,9 @@
 				DEVELOPMENT_TEAM = J2838ZD25V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherAston/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,9 +473,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aminov.WeatherAston;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
