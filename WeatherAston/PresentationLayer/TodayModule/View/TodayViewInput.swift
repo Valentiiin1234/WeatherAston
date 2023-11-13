@@ -10,4 +10,7 @@ import Foundation
 
 protocol TodayViewInput: AnyObject {
     
+    // for ViewController
+    
+    
 }

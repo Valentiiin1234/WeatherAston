@@ -10,4 +10,7 @@ import Foundation
 
 protocol TodayViewOutput {
     
+    // for ViewModel
+    func display(for city: String)
+    
 }

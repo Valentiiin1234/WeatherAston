@@ -19,11 +19,16 @@
 		0465B0262AF59267003F3D30 /* TodayViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0252AF59267003F3D30 /* TodayViewInput.swift */; };
 		0465B0282AF592FA003F3D30 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0272AF592FA003F3D30 /* TodayViewModel.swift */; };
 		0465B02D2AF596CF003F3D30 /* TabBarModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */; };
+		04C0E7CB2B02551100DC7FBA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CA2B02551100DC7FBA /* NetworkError.swift */; };
+		04C0E7CD2B02554500DC7FBA /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */; };
+		04C0E7CF2B02556900DC7FBA /* CityAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */; };
 		04E339C52AFE15AC0099FB20 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */; };
 		04E339C72AFE15FA0099FB20 /* FavoritesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */; };
 		04E339C92AFE164F0099FB20 /* FavoritesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */; };
 		04E339CB2AFE16920099FB20 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339CA2AFE16920099FB20 /* FavoritesViewController.swift */; };
 		04E339CD2AFE171E0099FB20 /* FavoritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339CC2AFE171E0099FB20 /* FavoritesAssembly.swift */; };
+		04EFFCC72B02209B000D75A1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFCC62B02209B000D75A1 /* NetworkManager.swift */; };
+		04EFFCC92B022CB9000D75A1 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFCC82B022CB9000D75A1 /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +46,16 @@
 		0465B0252AF59267003F3D30 /* TodayViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewInput.swift; sourceTree = "<group>"; };
 		0465B0272AF592FA003F3D30 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleAssembly.swift; sourceTree = "<group>"; };
+		04C0E7CA2B02551100DC7FBA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAPIEndpoint.swift; sourceTree = "<group>"; };
 		04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewInput.swift; sourceTree = "<group>"; };
 		04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewOutput.swift; sourceTree = "<group>"; };
 		04E339CA2AFE16920099FB20 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		04E339CC2AFE171E0099FB20 /* FavoritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAssembly.swift; sourceTree = "<group>"; };
+		04EFFCC62B02209B000D75A1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		04EFFCC82B022CB9000D75A1 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 			children = (
 				0465B01A2AF58F87003F3D30 /* ApplicationLayer */,
 				0465B0192AF58F4A003F3D30 /* PresentationLayer */,
+				04E339F12AFE26D20099FB20 /* NetworkService */,
 				0465B00C2AF58B42003F3D30 /* Assets.xcassets */,
 				0465B00E2AF58B42003F3D30 /* LaunchScreen.storyboard */,
 				0465B0112AF58B42003F3D30 /* Info.plist */,
@@ -204,6 +215,34 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		04E339F12AFE26D20099FB20 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				04EFFCC52B022055000D75A1 /* Models */,
+				04EFFCC42B02203E000D75A1 /* NetworkManager */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		04EFFCC42B02203E000D75A1 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				04EFFCC62B02209B000D75A1 /* NetworkManager.swift */,
+				04C0E7CA2B02551100DC7FBA /* NetworkError.swift */,
+				04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */,
+				04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		04EFFCC52B022055000D75A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04EFFCC82B022CB9000D75A1 /* City.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -278,15 +317,20 @@
 				04E339C52AFE15AC0099FB20 /* FavoritesViewModel.swift in Sources */,
 				04E339CB2AFE16920099FB20 /* FavoritesViewController.swift in Sources */,
 				0465B00B2AF58B41003F3D30 /* WeatherAston.xcdatamodeld in Sources */,
+				04EFFCC72B02209B000D75A1 /* NetworkManager.swift in Sources */,
 				0465B0222AF5915F003F3D30 /* TodayViewController.swift in Sources */,
 				04E339CD2AFE171E0099FB20 /* FavoritesAssembly.swift in Sources */,
 				0465B02D2AF596CF003F3D30 /* TabBarModuleAssembly.swift in Sources */,
+				04C0E7CF2B02556900DC7FBA /* CityAPIEndpoint.swift in Sources */,
+				04C0E7CD2B02554500DC7FBA /* APIEndpoint.swift in Sources */,
 				04E339C72AFE15FA0099FB20 /* FavoritesViewInput.swift in Sources */,
+				04EFFCC92B022CB9000D75A1 /* City.swift in Sources */,
 				04E339C92AFE164F0099FB20 /* FavoritesViewOutput.swift in Sources */,
 				0465B0262AF59267003F3D30 /* TodayViewInput.swift in Sources */,
 				0465B0032AF58B41003F3D30 /* SceneDelegate.swift in Sources */,
 				0465B01F2AF590B0003F3D30 /* TodayModuleAssembly.swift in Sources */,
 				0465B0182AF58CCD003F3D30 /* WeatherTabBarViewController.swift in Sources */,
+				04C0E7CB2B02551100DC7FBA /* NetworkError.swift in Sources */,
 				0465B0242AF59234003F3D30 /* TodayViewOutput.swift in Sources */,
 				0465B0282AF592FA003F3D30 /* TodayViewModel.swift in Sources */,
 			);
