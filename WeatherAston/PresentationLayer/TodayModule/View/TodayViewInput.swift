@@ -9,8 +9,6 @@ import Foundation
 
 
 protocol TodayViewInput: AnyObject {
-    
-    // for ViewController
-    
-    
+
+    func displayLabels(city: String, temp: String, speed: String, clouds: String, humidity: String, description: String)
 }

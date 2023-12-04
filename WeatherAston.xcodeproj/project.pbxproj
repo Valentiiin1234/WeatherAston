@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041F0C092B1B88030084F4D9 /* EntityCity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F0C072B1B88030084F4D9 /* EntityCity+CoreDataProperties.swift */; };
+		0432B08C2B14BCB90039703A /* LocationAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432B08B2B14BCB90039703A /* LocationAPIEndpoint.swift */; };
 		0465B0012AF58B41003F3D30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0002AF58B41003F3D30 /* AppDelegate.swift */; };
 		0465B0032AF58B41003F3D30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0022AF58B41003F3D30 /* SceneDelegate.swift */; };
 		0465B00B2AF58B41003F3D30 /* WeatherAston.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0092AF58B41003F3D30 /* WeatherAston.xcdatamodeld */; };
@@ -19,19 +21,25 @@
 		0465B0262AF59267003F3D30 /* TodayViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0252AF59267003F3D30 /* TodayViewInput.swift */; };
 		0465B0282AF592FA003F3D30 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0272AF592FA003F3D30 /* TodayViewModel.swift */; };
 		0465B02D2AF596CF003F3D30 /* TabBarModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */; };
+		0477425A2B0D1BEF002DA9DB /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047742592B0D1BEF002DA9DB /* ApplicationAssembly.swift */; };
+		0493296E2B08FEA2008FA010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493296D2B08FEA2008FA010 /* LocationService.swift */; };
+		04C0174B2B14F2A200B37C30 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0174A2B14F2A200B37C30 /* CityCell.swift */; };
 		04C0E7CB2B02551100DC7FBA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CA2B02551100DC7FBA /* NetworkError.swift */; };
 		04C0E7CD2B02554500DC7FBA /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */; };
 		04C0E7CF2B02556900DC7FBA /* CityAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */; };
+		04DFD2082B1B6E430004BA0D /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DFD2072B1B6E430004BA0D /* StorageService.swift */; };
 		04E339C52AFE15AC0099FB20 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */; };
 		04E339C72AFE15FA0099FB20 /* FavoritesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */; };
 		04E339C92AFE164F0099FB20 /* FavoritesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */; };
 		04E339CB2AFE16920099FB20 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339CA2AFE16920099FB20 /* FavoritesViewController.swift */; };
 		04E339CD2AFE171E0099FB20 /* FavoritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339CC2AFE171E0099FB20 /* FavoritesAssembly.swift */; };
-		04EFFCC72B02209B000D75A1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFCC62B02209B000D75A1 /* NetworkManager.swift */; };
+		04EFFCC72B02209B000D75A1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFCC62B02209B000D75A1 /* NetworkService.swift */; };
 		04EFFCC92B022CB9000D75A1 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EFFCC82B022CB9000D75A1 /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041F0C072B1B88030084F4D9 /* EntityCity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntityCity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0432B08B2B14BCB90039703A /* LocationAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAPIEndpoint.swift; sourceTree = "<group>"; };
 		0465AFFD2AF58B41003F3D30 /* WeatherAston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAston.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0465B0002AF58B41003F3D30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0465B0022AF58B41003F3D30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,15 +54,19 @@
 		0465B0252AF59267003F3D30 /* TodayViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewInput.swift; sourceTree = "<group>"; };
 		0465B0272AF592FA003F3D30 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleAssembly.swift; sourceTree = "<group>"; };
+		047742592B0D1BEF002DA9DB /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		0493296D2B08FEA2008FA010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		04C0174A2B14F2A200B37C30 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		04C0E7CA2B02551100DC7FBA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAPIEndpoint.swift; sourceTree = "<group>"; };
+		04DFD2072B1B6E430004BA0D /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewInput.swift; sourceTree = "<group>"; };
 		04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewOutput.swift; sourceTree = "<group>"; };
 		04E339CA2AFE16920099FB20 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		04E339CC2AFE171E0099FB20 /* FavoritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAssembly.swift; sourceTree = "<group>"; };
-		04EFFCC62B02209B000D75A1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		04EFFCC62B02209B000D75A1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		04EFFCC82B022CB9000D75A1 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +81,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04453B8E2B1C571400033EBC /* APIEndpont */ = {
+			isa = PBXGroup;
+			children = (
+				0432B08B2B14BCB90039703A /* LocationAPIEndpoint.swift */,
+				04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */,
+				04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */,
+			);
+			path = APIEndpont;
+			sourceTree = "<group>";
+		};
 		0465AFF42AF58B41003F3D30 = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +112,7 @@
 			children = (
 				0465B01A2AF58F87003F3D30 /* ApplicationLayer */,
 				0465B0192AF58F4A003F3D30 /* PresentationLayer */,
-				04E339F12AFE26D20099FB20 /* NetworkService */,
+				0493296B2B08FE5E008FA010 /* Services */,
 				0465B00C2AF58B42003F3D30 /* Assets.xcassets */,
 				0465B00E2AF58B42003F3D30 /* LaunchScreen.storyboard */,
 				0465B0112AF58B42003F3D30 /* Info.plist */,
@@ -112,6 +134,7 @@
 		0465B01A2AF58F87003F3D30 /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				047742582B0D1BB5002DA9DB /* ApplicationAssembly */,
 				0465B0022AF58B41003F3D30 /* SceneDelegate.swift */,
 				0465B0002AF58B41003F3D30 /* AppDelegate.swift */,
 			);
@@ -179,6 +202,49 @@
 			path = TabBarController;
 			sourceTree = "<group>";
 		};
+		047742582B0D1BB5002DA9DB /* ApplicationAssembly */ = {
+			isa = PBXGroup;
+			children = (
+				047742592B0D1BEF002DA9DB /* ApplicationAssembly.swift */,
+			);
+			path = ApplicationAssembly;
+			sourceTree = "<group>";
+		};
+		0493296B2B08FE5E008FA010 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				04DFD2062B1B5D090004BA0D /* StorageService */,
+				0493296C2B08FE74008FA010 /* LocationService */,
+				04E339F12AFE26D20099FB20 /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0493296C2B08FE74008FA010 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				0493296D2B08FEA2008FA010 /* LocationService.swift */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
+		04C017492B14F27100B37C30 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				04C0174A2B14F2A200B37C30 /* CityCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		04DFD2062B1B5D090004BA0D /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				04DFD2072B1B6E430004BA0D /* StorageService.swift */,
+				041F0C072B1B88030084F4D9 /* EntityCity+CoreDataProperties.swift */,
+			);
+			path = StorageService;
+			sourceTree = "<group>";
+		};
 		04E339BE2AFE14FD0099FB20 /* FavoritesModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +269,7 @@
 				04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */,
 				04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */,
 				04E339CA2AFE16920099FB20 /* FavoritesViewController.swift */,
+				04C017492B14F27100B37C30 /* Subviews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,6 +285,7 @@
 		04E339F12AFE26D20099FB20 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				04453B8E2B1C571400033EBC /* APIEndpont */,
 				04EFFCC52B022055000D75A1 /* Models */,
 				04EFFCC42B02203E000D75A1 /* NetworkManager */,
 			);
@@ -227,10 +295,8 @@
 		04EFFCC42B02203E000D75A1 /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				04EFFCC62B02209B000D75A1 /* NetworkManager.swift */,
+				04EFFCC62B02209B000D75A1 /* NetworkService.swift */,
 				04C0E7CA2B02551100DC7FBA /* NetworkError.swift */,
-				04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */,
-				04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -313,13 +379,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041F0C092B1B88030084F4D9 /* EntityCity+CoreDataProperties.swift in Sources */,
 				0465B0012AF58B41003F3D30 /* AppDelegate.swift in Sources */,
 				04E339C52AFE15AC0099FB20 /* FavoritesViewModel.swift in Sources */,
+				04C0174B2B14F2A200B37C30 /* CityCell.swift in Sources */,
 				04E339CB2AFE16920099FB20 /* FavoritesViewController.swift in Sources */,
 				0465B00B2AF58B41003F3D30 /* WeatherAston.xcdatamodeld in Sources */,
-				04EFFCC72B02209B000D75A1 /* NetworkManager.swift in Sources */,
+				0477425A2B0D1BEF002DA9DB /* ApplicationAssembly.swift in Sources */,
+				04EFFCC72B02209B000D75A1 /* NetworkService.swift in Sources */,
 				0465B0222AF5915F003F3D30 /* TodayViewController.swift in Sources */,
 				04E339CD2AFE171E0099FB20 /* FavoritesAssembly.swift in Sources */,
+				0493296E2B08FEA2008FA010 /* LocationService.swift in Sources */,
+				04DFD2082B1B6E430004BA0D /* StorageService.swift in Sources */,
 				0465B02D2AF596CF003F3D30 /* TabBarModuleAssembly.swift in Sources */,
 				04C0E7CF2B02556900DC7FBA /* CityAPIEndpoint.swift in Sources */,
 				04C0E7CD2B02554500DC7FBA /* APIEndpoint.swift in Sources */,
@@ -327,6 +398,7 @@
 				04EFFCC92B022CB9000D75A1 /* City.swift in Sources */,
 				04E339C92AFE164F0099FB20 /* FavoritesViewOutput.swift in Sources */,
 				0465B0262AF59267003F3D30 /* TodayViewInput.swift in Sources */,
+				0432B08C2B14BCB90039703A /* LocationAPIEndpoint.swift in Sources */,
 				0465B0032AF58B41003F3D30 /* SceneDelegate.swift in Sources */,
 				0465B01F2AF590B0003F3D30 /* TodayModuleAssembly.swift in Sources */,
 				0465B0182AF58CCD003F3D30 /* WeatherTabBarViewController.swift in Sources */,

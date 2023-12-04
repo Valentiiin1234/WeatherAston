@@ -5,28 +5,70 @@
 //  Created by Mac on 03.11.2023.
 //
 
-import UIKit
+import Foundation
 
 final class TodayViewModel: TodayViewOutput {
-    private var citty : City?
+    private let locationService: LocationService
+    private let storageService: StorageService
+    private var city: City?
+    private var weather: [Weather] = []
+    private var description = ""
+    
+    private var entity: [EntityCity] = []
+    
     weak var view: TodayViewInput?
     
-    func display(for city: String) {
+    init(locationService: LocationService, storageService: StorageService){
+        self.locationService = locationService
+        self.storageService = storageService
+    }
+    
+    func getCurrentLocation() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            guard let location = self.locationService.location?.coordinate else {
+                let endpoint = CityAPIEndpoint(city: "Moscow")
+                self.queryCity(for: endpoint)
+                return
+            }
+            let endpoint = LocationAPIEndPoint(lat: String(location.latitude), lon: String(location.longitude))
+            self.queryCity(for: endpoint)
+        }
+    }
+    
+    func searchCity(for city: String) {
         let endpoint = CityAPIEndpoint(city: "\(city)")
-        NetworkManager.shared.fetch(City.self, from: endpoint) {[weak self] result in
+        queryCity(for: endpoint)
+#warning("delete")
+        storageService.createData(city)
+    }
+}
+
+extension TodayViewModel{
+    func queryCity(for city: APIEndpoint) {
+        NetworkService.shared.fetch(City.self, from: city) {[weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let data):
-                    self?.citty = data
-                    print("\(String(describing: self?.citty?.name))")
-                    print("\(String(describing: self?.citty?.coord.lat))")
-                    print("\(String(describing: self?.citty?.coord.lon))")
-                    print("\(String(describing: self?.citty?.weather.description))")
-                    
+                    self?.city = data
+                    self?.weather = data.weather
+                    self?.weather.forEach({ result in
+                        self?.description =  result.description
+                    })
+                    guard let description = self?.description else {return}
+                    guard let cityName = self?.city?.name else {return}
+                    guard let temp = self?.city?.main.temp else {return}
+                    guard let speed = self?.city?.wind.speed else {return}
+                    guard let clouds = self?.city?.clouds.all else {return}
+                    guard let humidity = self?.city?.main.humidity else {return}
+                    self?.view?.displayLabels(city: cityName, temp: String(Int(temp - 273)), speed: String(speed), clouds: String(clouds), humidity: String(humidity), description: description)
                 case .failure(let error):
                     print(error)
+#warning("city ​​not found, show alert")
+                    
                 }
             }
         }
     }
 }
+
+

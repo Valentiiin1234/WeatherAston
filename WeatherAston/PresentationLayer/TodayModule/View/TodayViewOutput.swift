@@ -9,8 +9,7 @@ import Foundation
 
 
 protocol TodayViewOutput {
-    
-    // for ViewModel
-    func display(for city: String)
-    
+
+    func searchCity(for city: String)
+    func getCurrentLocation() 
 }

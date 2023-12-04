@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// MARK: - City
 struct City: Decodable {
     let coord: Coord
     let weather: [Weather]
@@ -56,7 +56,9 @@ struct Sys: Decodable {
 // MARK: - Weather
 struct Weather: Decodable {
     let id: Int
-    let main, description, icon: String
+    let main: String
+    let description: String
+    let icon: String
 }
 
 // MARK: - Wind

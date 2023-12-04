@@ -1,5 +1,5 @@
 //
-//  NetworkManager.swift
+//  NetworkService.swift
 //  WeatherAston
 //
 //  Created by Mac on 13.11.2023.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class NetworkManager {
+final class NetworkService {
     
-    static let shared = NetworkManager()
+    static let shared = NetworkService()
     
     private init() {}
     
@@ -25,11 +25,10 @@ final class NetworkManager {
         let query = params.joined(separator: "&")
         
         guard let url = URL(string: "\(baseURL)\(endpoint.path)?\(query)&appid=\(key)") else {
-            print("\(baseURL)\(endpoint.path)?\(query)&appid=\(key)")
             completion(.failure(.invalidURL))
             return
         }
-        
+
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method
         

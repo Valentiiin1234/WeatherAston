@@ -10,10 +10,9 @@ import UIKit
 final class FavoritesModuleAssembly {
     
     static func buildModule() -> UIViewController {
-        let viewModel = FavoritesViewModel()
+        let viewModel = FavoritesViewModel(storageService: ApplicationAssembly.storageService)
         let view = FavoritesViewController(viewModel: viewModel)
         viewModel.view = view
         return view
     }
 }
-

@@ -9,4 +9,6 @@ import Foundation
 
 protocol FavoritesViewOutput {
     
+    func showCities()
+    func getTemperature(for city: String)
 }
