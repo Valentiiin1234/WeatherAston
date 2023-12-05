@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TabBarModuleAssembly {
+final class TabBarModuleAssembly {
     
     static func buildModule() -> UITabBarController {
          return WeatherTabBarViewController()

@@ -12,7 +12,7 @@ final class TodayModuleAssembly {
     static func buildModule() -> UIViewController {
         let viewModel = TodayViewModel(
             locationService: ApplicationAssembly.locationService,
-            storageService: ApplicationAssembly.storageService
+            storageService: ApplicationAssembly.storageService 
         )
         let view = TodayViewController(viewModel: viewModel)
         viewModel.view = view

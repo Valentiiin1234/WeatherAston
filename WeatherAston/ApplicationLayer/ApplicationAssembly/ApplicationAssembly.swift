@@ -7,13 +7,12 @@
 
 import Foundation
 
-
 final class ApplicationAssembly {
     static var locationService: LocationService = {
-        return LocationService()
-    }()
+        return LocationServiceImpl()
+    }() 
     
     static var storageService: StorageService = {
-        return StorageService()
+        return StorageServiceImpl()
     }()
 }

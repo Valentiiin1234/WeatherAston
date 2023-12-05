@@ -8,6 +8,7 @@
 import Foundation
 
 final class TodayViewModel: TodayViewOutput {
+
     private let locationService: LocationService
     private let storageService: StorageService
     private var city: City?
@@ -19,20 +20,22 @@ final class TodayViewModel: TodayViewOutput {
     weak var view: TodayViewInput?
     
     init(locationService: LocationService, storageService: StorageService){
+
         self.locationService = locationService
         self.storageService = storageService
     }
     
     func getCurrentLocation() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
-            guard let location = self.locationService.location?.coordinate else {
-                let endpoint = CityAPIEndpoint(city: "Moscow")
-                self.queryCity(for: endpoint)
-                return
-            }
-            let endpoint = LocationAPIEndPoint(lat: String(location.latitude), lon: String(location.longitude))
-            self.queryCity(for: endpoint)
-        }
+//        locationService.requestAccess { isGranted in
+//            switch isGranted {
+//                
+//            case true:
+//                <#code#>
+//            case false:
+//                <#code#>
+//            }
+//        }
+       
     }
     
     func searchCity(for city: String) {

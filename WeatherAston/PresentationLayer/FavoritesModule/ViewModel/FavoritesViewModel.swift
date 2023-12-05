@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-
 class FavoritesViewModel: FavoritesViewOutput {
 
     weak var view: FavoritesViewInput?
@@ -18,17 +16,16 @@ class FavoritesViewModel: FavoritesViewOutput {
     init(storageService: StorageService) {
         self.storageService = storageService
     }
-    
-    
+
     func showCities() {
-        storageService.retriveData { result in
-            switch result {
-            case .success(let data):
-                view?.setupCities(cities: data)
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        storageService.retriveData { result in
+//            switch result {
+//            case .success(let data):
+//                view?.setupCities(cities: data)
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
     }
     
     func getTemperature(for city: String) {

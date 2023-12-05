@@ -22,12 +22,17 @@
 		0465B0282AF592FA003F3D30 /* TodayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B0272AF592FA003F3D30 /* TodayViewModel.swift */; };
 		0465B02D2AF596CF003F3D30 /* TabBarModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */; };
 		0477425A2B0D1BEF002DA9DB /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047742592B0D1BEF002DA9DB /* ApplicationAssembly.swift */; };
-		0493296E2B08FEA2008FA010 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493296D2B08FEA2008FA010 /* LocationService.swift */; };
+		048012DD2B1F0DB5006E0190 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048012DC2B1F0DB5006E0190 /* LocationService.swift */; };
+		048012DF2B1F131A006E0190 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048012DE2B1F131A006E0190 /* StorageService.swift */; };
+		048E02E62B1F85B00051A30A /* WeatherParameterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E02E52B1F85B00051A30A /* WeatherParameterView.swift */; };
+		048E02E82B1F86FE0051A30A /* ParametersPlateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048E02E72B1F86FE0051A30A /* ParametersPlateView.swift */; };
+		048EE05E2B1E297C003ED59A /* TabBarFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EE05D2B1E297C003ED59A /* TabBarFactory.swift */; };
+		0493296E2B08FEA2008FA010 /* LocationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493296D2B08FEA2008FA010 /* LocationServiceImpl.swift */; };
 		04C0174B2B14F2A200B37C30 /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0174A2B14F2A200B37C30 /* CityCell.swift */; };
 		04C0E7CB2B02551100DC7FBA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CA2B02551100DC7FBA /* NetworkError.swift */; };
 		04C0E7CD2B02554500DC7FBA /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */; };
 		04C0E7CF2B02556900DC7FBA /* CityAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */; };
-		04DFD2082B1B6E430004BA0D /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DFD2072B1B6E430004BA0D /* StorageService.swift */; };
+		04DFD2082B1B6E430004BA0D /* StorageServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DFD2072B1B6E430004BA0D /* StorageServiceImpl.swift */; };
 		04E339C52AFE15AC0099FB20 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */; };
 		04E339C72AFE15FA0099FB20 /* FavoritesViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */; };
 		04E339C92AFE164F0099FB20 /* FavoritesViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */; };
@@ -55,12 +60,17 @@
 		0465B0272AF592FA003F3D30 /* TodayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewModel.swift; sourceTree = "<group>"; };
 		0465B02C2AF596CF003F3D30 /* TabBarModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModuleAssembly.swift; sourceTree = "<group>"; };
 		047742592B0D1BEF002DA9DB /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
-		0493296D2B08FEA2008FA010 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		048012DC2B1F0DB5006E0190 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		048012DE2B1F131A006E0190 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		048E02E52B1F85B00051A30A /* WeatherParameterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherParameterView.swift; sourceTree = "<group>"; };
+		048E02E72B1F86FE0051A30A /* ParametersPlateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersPlateView.swift; sourceTree = "<group>"; };
+		048EE05D2B1E297C003ED59A /* TabBarFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFactory.swift; sourceTree = "<group>"; };
+		0493296D2B08FEA2008FA010 /* LocationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceImpl.swift; sourceTree = "<group>"; };
 		04C0174A2B14F2A200B37C30 /* CityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCell.swift; sourceTree = "<group>"; };
 		04C0E7CA2B02551100DC7FBA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		04C0E7CC2B02554500DC7FBA /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		04C0E7CE2B02556900DC7FBA /* CityAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityAPIEndpoint.swift; sourceTree = "<group>"; };
-		04DFD2072B1B6E430004BA0D /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		04DFD2072B1B6E430004BA0D /* StorageServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceImpl.swift; sourceTree = "<group>"; };
 		04E339C42AFE15AC0099FB20 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		04E339C62AFE15FA0099FB20 /* FavoritesViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewInput.swift; sourceTree = "<group>"; };
 		04E339C82AFE164E0099FB20 /* FavoritesViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewOutput.swift; sourceTree = "<group>"; };
@@ -155,6 +165,7 @@
 				0465B0212AF5915F003F3D30 /* TodayViewController.swift */,
 				0465B0232AF59234003F3D30 /* TodayViewOutput.swift */,
 				0465B0252AF59267003F3D30 /* TodayViewInput.swift */,
+				048E02E42B1F85290051A30A /* Subviews */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				0465B0172AF58CCD003F3D30 /* WeatherTabBarViewController.swift */,
+				048EE05C2B1E2941003ED59A /* Factory */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -208,6 +220,23 @@
 				047742592B0D1BEF002DA9DB /* ApplicationAssembly.swift */,
 			);
 			path = ApplicationAssembly;
+			sourceTree = "<group>";
+		};
+		048E02E42B1F85290051A30A /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				048E02E52B1F85B00051A30A /* WeatherParameterView.swift */,
+				048E02E72B1F86FE0051A30A /* ParametersPlateView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		048EE05C2B1E2941003ED59A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				048EE05D2B1E297C003ED59A /* TabBarFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 		0493296B2B08FE5E008FA010 /* Services */ = {
@@ -223,7 +252,8 @@
 		0493296C2B08FE74008FA010 /* LocationService */ = {
 			isa = PBXGroup;
 			children = (
-				0493296D2B08FEA2008FA010 /* LocationService.swift */,
+				0493296D2B08FEA2008FA010 /* LocationServiceImpl.swift */,
+				048012DC2B1F0DB5006E0190 /* LocationService.swift */,
 			);
 			path = LocationService;
 			sourceTree = "<group>";
@@ -239,8 +269,9 @@
 		04DFD2062B1B5D090004BA0D /* StorageService */ = {
 			isa = PBXGroup;
 			children = (
-				04DFD2072B1B6E430004BA0D /* StorageService.swift */,
+				04DFD2072B1B6E430004BA0D /* StorageServiceImpl.swift */,
 				041F0C072B1B88030084F4D9 /* EntityCity+CoreDataProperties.swift */,
+				048012DE2B1F131A006E0190 /* StorageService.swift */,
 			);
 			path = StorageService;
 			sourceTree = "<group>";
@@ -380,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041F0C092B1B88030084F4D9 /* EntityCity+CoreDataProperties.swift in Sources */,
+				048E02E62B1F85B00051A30A /* WeatherParameterView.swift in Sources */,
 				0465B0012AF58B41003F3D30 /* AppDelegate.swift in Sources */,
 				04E339C52AFE15AC0099FB20 /* FavoritesViewModel.swift in Sources */,
 				04C0174B2B14F2A200B37C30 /* CityCell.swift in Sources */,
@@ -389,12 +421,15 @@
 				04EFFCC72B02209B000D75A1 /* NetworkService.swift in Sources */,
 				0465B0222AF5915F003F3D30 /* TodayViewController.swift in Sources */,
 				04E339CD2AFE171E0099FB20 /* FavoritesAssembly.swift in Sources */,
-				0493296E2B08FEA2008FA010 /* LocationService.swift in Sources */,
-				04DFD2082B1B6E430004BA0D /* StorageService.swift in Sources */,
+				0493296E2B08FEA2008FA010 /* LocationServiceImpl.swift in Sources */,
+				04DFD2082B1B6E430004BA0D /* StorageServiceImpl.swift in Sources */,
 				0465B02D2AF596CF003F3D30 /* TabBarModuleAssembly.swift in Sources */,
 				04C0E7CF2B02556900DC7FBA /* CityAPIEndpoint.swift in Sources */,
+				048012DD2B1F0DB5006E0190 /* LocationService.swift in Sources */,
 				04C0E7CD2B02554500DC7FBA /* APIEndpoint.swift in Sources */,
 				04E339C72AFE15FA0099FB20 /* FavoritesViewInput.swift in Sources */,
+				048012DF2B1F131A006E0190 /* StorageService.swift in Sources */,
+				048EE05E2B1E297C003ED59A /* TabBarFactory.swift in Sources */,
 				04EFFCC92B022CB9000D75A1 /* City.swift in Sources */,
 				04E339C92AFE164F0099FB20 /* FavoritesViewOutput.swift in Sources */,
 				0465B0262AF59267003F3D30 /* TodayViewInput.swift in Sources */,
@@ -403,6 +438,7 @@
 				0465B01F2AF590B0003F3D30 /* TodayModuleAssembly.swift in Sources */,
 				0465B0182AF58CCD003F3D30 /* WeatherTabBarViewController.swift in Sources */,
 				04C0E7CB2B02551100DC7FBA /* NetworkError.swift in Sources */,
+				048E02E82B1F86FE0051A30A /* ParametersPlateView.swift in Sources */,
 				0465B0242AF59234003F3D30 /* TodayViewOutput.swift in Sources */,
 				0465B0282AF592FA003F3D30 /* TodayViewModel.swift in Sources */,
 			);

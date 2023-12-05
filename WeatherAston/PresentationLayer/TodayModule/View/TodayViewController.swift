@@ -8,15 +8,12 @@
 import UIKit
 
 final class TodayViewController: UIViewController, UISearchBarDelegate {
+    private let searchController = UISearchController()
+    private let imageLocation = UIImageView()
     private let labelCity = UILabel()
     private let labelTemp = UILabel()
-    private let labelWind = UILabel()
-    private let labelClouds = UILabel()
-    private let labelHumidity = UILabel()
     private let labelDescription = UILabel()
-    private let stackView = UIStackView()
-    private let imageLocation = UIImageView()
-    private let searchController = UISearchController()
+    private let params = ParametersPlateView()
     private let activityIndicator = UIActivityIndicatorView()
     
     private let viewModel: TodayViewOutput
@@ -39,27 +36,28 @@ final class TodayViewController: UIViewController, UISearchBarDelegate {
     
     //MARK: - MethodsDelegate
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        hideForecast()
         activityIndicator.startAnimating()
-        guard let city = searchBar.text else {return}
+        guard let city = searchBar.text, !city.isEmpty else {
+            activityIndicator.stopAnimating()
+            return
+        }
+        hideForecast()
         viewModel.searchCity(for: city)
     }
+    
 }
 
-//MARK: - TodayViewInput
+    //MARK: - TodayViewInput
 extension TodayViewController: TodayViewInput {
     func displayLabels(city: String, temp: String, speed: String, clouds: String, humidity: String, description: String) {
         labelCity.text = city
         labelTemp.text = temp + "°"
-        labelWind.text = "wind: " + speed + " m/s"
-        labelClouds.text = "cloudy: " + clouds + "%"
-        labelHumidity.text = "humidity: " + humidity + "%"
         labelDescription.text = description
         showForecast()
         activityIndicator.stopAnimating()
     }
 }
-//MARK: - setupUI
+    //MARK: - setupUI
 private extension TodayViewController {
     func settingsLabels(labels: UILabel...) {
         labels.forEach { label in
@@ -73,27 +71,29 @@ private extension TodayViewController {
     }
     
     func showForecast(){
-        stackView.isHidden = false
+
         labelCity.isHidden = false
         labelTemp.isHidden = false
         imageLocation.isHidden = false
         labelDescription.isHidden = false
+        activityIndicator.stopAnimating()
     }
     func hideForecast(){
         labelCity.isHidden = true
         labelTemp.isHidden = true
         imageLocation.isHidden = true
-        stackView.isHidden = true
         labelDescription.isHidden = true
+        activityIndicator.startAnimating()
     }
-
+    
     func setupUI(){
         view.addSubview(imageLocation)
         view.addSubview(labelCity)
-        view.addSubview(labelTemp)
+
         view.addSubview(labelDescription)
-        view.addSubview(stackView)
+
         view.addSubview(activityIndicator)
+        view.addSubview(params)
         
         view.backgroundColor = .systemBackground
         
@@ -102,15 +102,7 @@ private extension TodayViewController {
         searchController.searchBar.placeholder = "Enter city"
         searchController.searchBar.delegate = self
         searchController.hidesNavigationBarDuringPresentation = false
-        
-        stackView.addArrangedSubview(labelWind)
-        stackView.addArrangedSubview(labelClouds)
-        stackView.addArrangedSubview(labelHumidity)
-        
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
-        settingsLabels(labels: labelWind, labelClouds, labelHumidity)
-        
+
         imageLocation.image = UIImage(systemName: "location.fill")
         labelCity.font = .boldSystemFont(ofSize: 35)
         labelTemp.font = .boldSystemFont(ofSize: 65)
@@ -142,18 +134,17 @@ private extension TodayViewController {
         labelTemp.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 75).isActive = true
         labelTemp.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -75).isActive = true
         labelTemp.heightAnchor.constraint(equalTo: labelTemp.widthAnchor, multiplier: 1 / 1).isActive = true
-        
-        
+
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
         labelDescription.topAnchor.constraint(equalTo: labelTemp.bottomAnchor).isActive = true
         labelDescription.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         labelDescription.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        stackView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        stackView.topAnchor.constraint(equalTo: labelDescription.bottomAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        params.translatesAutoresizingMaskIntoConstraints = false
+        params.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        params.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        params.topAnchor.constraint(equalTo: labelDescription.bottomAnchor).isActive = true
+        params.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
