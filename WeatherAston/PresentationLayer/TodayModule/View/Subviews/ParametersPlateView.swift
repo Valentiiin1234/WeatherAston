@@ -34,9 +34,8 @@ final class ParametersPlateView: UIView {
     
     private func setupConstraints() {
         vStack.translatesAutoresizingMaskIntoConstraints = false
-        vStack.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        vStack.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        vStack.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        vStack.rightAnchor.constraint(equalTo: rightAnchor).isActive = true 
+        vStack.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        vStack.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+       
     }
 }

@@ -8,16 +8,14 @@
 import UIKit
 
 final class WeatherParameterView: UIView {
-   
+    
     private let iconLabel = UILabel()
     private let titleLabel = UILabel()
+    private let hStack = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        iconLabel.textAlignment = .right
-        titleLabel.textAlignment = .left
-        addSubview(iconLabel)
-        addSubview(titleLabel)
+        setupUI()
         setupConstraints()
     }
     
@@ -25,19 +23,22 @@ final class WeatherParameterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func setupUI() {
+        iconLabel.textAlignment = .right
+        titleLabel.textAlignment = .left
+        addSubview(hStack)
+        hStack.addArrangedSubview(iconLabel)
+        hStack.addArrangedSubview(titleLabel)
+        hStack.axis = .horizontal
+        hStack.distribution = .fillProportionally
+        setupConstraints()
+    }
     private func setupConstraints(){
+        
+        hStack.translatesAutoresizingMaskIntoConstraints = false
+        hStack.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        hStack.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        hStack.heightAnchor.constraint(equalToConstant: 100).isActive = true
     
-        iconLabel.translatesAutoresizingMaskIntoConstraints = false
-        iconLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        iconLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        iconLabel.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        iconLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        titleLabel.leftAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        titleLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        
     }
 }
