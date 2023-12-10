@@ -103,7 +103,6 @@ final class ForecastView: UIView {
         
         vStack.translatesAutoresizingMaskIntoConstraints = false
         vStack.heightAnchor.constraint(equalToConstant: 200).isActive = true
-//        vStack.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         vStack.topAnchor.constraint(equalTo: labelDescription.bottomAnchor).isActive = true
         vStack.leftAnchor.constraint(equalTo: leftAnchor,constant: 15).isActive = true
         vStack.rightAnchor.constraint(equalTo: rightAnchor,constant: -15).isActive = true

@@ -9,6 +9,7 @@ import Foundation
 
 
 protocol TodayViewInput: AnyObject {
+    
     func loading()
     func showForecast(with viewModel: ForecastViewModel)
     func showError()

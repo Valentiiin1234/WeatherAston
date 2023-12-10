@@ -25,8 +25,7 @@ final class LocationView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
+
     func configure(with viewModel: LocationViewParamViewModel){
         self.city.text = viewModel.cityName
     }
@@ -52,7 +51,5 @@ final class LocationView: UIView {
         city.topAnchor.constraint(equalTo: topAnchor).isActive = true
         city.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         city.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        
     }
-    
 }

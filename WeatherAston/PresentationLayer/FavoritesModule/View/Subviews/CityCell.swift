@@ -25,7 +25,6 @@ class CityCell: UICollectionViewCell {
     
     func congifure(with city: EntityCity) {
         self.labelCity.text = city.name
-       
     }
     
     private func setupUI(){

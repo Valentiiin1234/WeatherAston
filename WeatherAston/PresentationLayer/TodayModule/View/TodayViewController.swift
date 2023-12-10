@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TodayViewController: UIViewController, UISearchBarDelegate, UISearchControllerDelegate {
+final class TodayViewController: UIViewController, UISearchBarDelegate {
     
     private let searchController = UISearchController()
     
@@ -32,8 +32,6 @@ final class TodayViewController: UIViewController, UISearchBarDelegate, UISearch
         setupConstraints()
         setupActions()
         viewModel.getCurrentLocation()
-
- 
     }
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         guard let city = searchBar.text, !city.isEmpty else {
@@ -67,7 +65,6 @@ extension TodayViewController: TodayViewInput {
 //MARK: - setupUI
 private extension TodayViewController {
 
-    
     func setupUI(){
         view.addSubview(activityIndicator)
         view.addSubview(forecastView)

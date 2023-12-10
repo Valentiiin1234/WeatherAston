@@ -60,8 +60,6 @@ final class StorageServiceImpl: StorageService {
     }
     
     func deleteData() {
-        //        viewContext.delete(entity)
-        //        saveContext()
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: EntityCity.fetchRequest())
         do {
             try viewContext.execute(deleteRequest)
@@ -70,8 +68,7 @@ final class StorageServiceImpl: StorageService {
         } catch {
             return
         }
-        
-        
+ 
     }
     
     // MARK: - Core Data Saving support

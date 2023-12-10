@@ -13,7 +13,6 @@ struct WeatherParameterViewModel{
     let title: String
 }
 
-
 final class WeatherParameterView: UIView {
     
     private let parameterLabel = UILabel()
@@ -35,9 +34,9 @@ final class WeatherParameterView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
+
     private func setupUI() {
+        
         parameterLabel.textAlignment = .center
         titleLabel.textAlignment = .center
         addSubview(hStack)
@@ -59,6 +58,5 @@ final class WeatherParameterView: UIView {
         hStack.heightAnchor.constraint(equalToConstant: 50).isActive = true
         hStack.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         hStack.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-
     }
 }
