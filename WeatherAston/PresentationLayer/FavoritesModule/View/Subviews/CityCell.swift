@@ -23,7 +23,7 @@ class CityCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func settingCell(with city: EntityCity) {
+    func congifure(with city: EntityCity) {
         self.labelCity.text = city.name
        
     }

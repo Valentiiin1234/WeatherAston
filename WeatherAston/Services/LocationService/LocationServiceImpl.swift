@@ -10,36 +10,35 @@ import CoreLocation
 
 class LocationServiceImpl: NSObject, CLLocationManagerDelegate, LocationService {
     
-    private var locationManager: CLLocationManager!
+    private var locationManager = CLLocationManager()
     
-    private var completion: ((_ isGranted: Bool) -> Void)?
-    
-    private(set) var location: CLLocation?
+    private var completion: ((Result<CLLocation,LocationError>) -> Void)?
 
     override init() {
         super.init()
-        locationManager = CLLocationManager()
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
     
-    func requestAccess(_ completion: @escaping (_ isGranted: Bool) -> Void){
-        self.completion = completion
+    
+    func detectLocation(_ compelition: @escaping (Result<CLLocation, LocationError>) -> Void) {
+        self.completion = compelition
         processAuthorization(status: locationManager.authorizationStatus)
     }
-    
+
     private func processAuthorization(status: CLAuthorizationStatus) {
         switch status {
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
-            completion?(true)
+            
         case .restricted, .denied:
-            completion?(false)
+            completion?(.failure(.notAuthorized))
             break
         @unknown default:
-            completion?(false)
+            completion?(.failure(.noLocation))
         }
     }
     
@@ -48,7 +47,13 @@ class LocationServiceImpl: NSObject, CLLocationManagerDelegate, LocationService 
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.location = locations.first
+        if let location = locations.first {
+            completion?(.success(location))
+            
+        } else {
+            completion?(.failure(.noLocation))
+        }
+        locationManager.stopUpdatingLocation()
     }
 }
 

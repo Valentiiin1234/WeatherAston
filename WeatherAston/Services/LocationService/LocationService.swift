@@ -7,7 +7,12 @@
 import CoreLocation
 import Foundation
 
+
+enum LocationError: Error {
+    
+    case notAuthorized
+    case noLocation
+}
 protocol LocationService {
-    var location: CLLocation? { get }
-    func requestAccess(_ completion: @escaping (_ isGranted: Bool) -> Void)
+    func detectLocation(_ compelition: @escaping (Result<CLLocation, LocationError>) -> Void)
 }

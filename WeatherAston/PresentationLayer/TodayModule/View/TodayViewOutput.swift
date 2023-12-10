@@ -10,6 +10,6 @@ import Foundation
 
 protocol TodayViewOutput {
 
-    func searchCity(for city: String)
-    func getCurrentLocation() 
+    func getCurrentLocation()
+    func searchCity(city: String)
 }

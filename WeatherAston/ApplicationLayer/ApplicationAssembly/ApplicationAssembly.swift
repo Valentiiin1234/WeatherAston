@@ -15,4 +15,8 @@ final class ApplicationAssembly {
     static var storageService: StorageService = {
         return StorageServiceImpl()
     }()
+    
+    static var networkService: NetworkService = {
+        return NetworkServiceImpl()
+    }()
 }

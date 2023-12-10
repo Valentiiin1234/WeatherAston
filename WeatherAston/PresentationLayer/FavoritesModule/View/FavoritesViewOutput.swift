@@ -8,7 +8,8 @@
 import Foundation
 
 protocol FavoritesViewOutput {
-    
+    // viewModel methods
     func showCities()
-    func getTemperature(for city: String)
+    func clear()
+
 }

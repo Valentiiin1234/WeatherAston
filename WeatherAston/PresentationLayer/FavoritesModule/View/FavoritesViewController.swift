@@ -18,6 +18,8 @@ final class FavoritesViewController: UIViewController {
         return collectionView
     }()
     
+    private var clearButton = UIBarButtonItem()
+    
     private var cities: [EntityCity] = []
 
     private let viewModel: FavoritesViewOutput
@@ -44,8 +46,13 @@ final class FavoritesViewController: UIViewController {
         view.addSubview(collectionView)
         collectionView.delegate = self
         collectionView.dataSource = self
-        navigationItem.title = "Favorites City"
+        navigationItem.title = "History"
         view.backgroundColor = .systemBackground
+        
+        navigationItem.rightBarButtonItem = clearButton
+        clearButton.target = self
+        clearButton.image = UIImage(systemName: "trash")
+        clearButton.action = #selector(clearHistory)
 
     }
     //MARK: - setupConstraints
@@ -55,6 +62,12 @@ final class FavoritesViewController: UIViewController {
         collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+    }
+
+    @objc private func clearHistory(){
+        viewModel.clear()
+        cities.removeAll()
+        collectionView.reloadData()
     }
 }
 //MARK: - FavoritesViewInput
@@ -74,9 +87,7 @@ extension FavoritesViewController: UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CityCell.cellIdentifier, for: indexPath) as? CityCell else {return UICollectionViewCell()}
         let city = cities[indexPath.row]
-       
-        viewModel.getTemperature(for: city.name ?? "")
-        cell.settingCell(with: city)
+        cell.congifure(with: city)
         return cell
     }
 

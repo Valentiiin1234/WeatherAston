@@ -5,6 +5,7 @@
 //  Created by Mac on 02.12.2023.
 //
 
+
 import CoreData
 
 final class StorageServiceImpl: StorageService {
@@ -26,15 +27,26 @@ final class StorageServiceImpl: StorageService {
     }
     // MARK: - CRUD
     func createData(_ nameCity: String) {
-        guard let cityDescription = NSEntityDescription.entity(forEntityName: "EntityCity", in: viewContext) else {return}
-        let city = EntityCity(entity: cityDescription, insertInto: viewContext)
-        city.name = nameCity
-        saveContext()
+
+        let fetch = NSFetchRequest<EntityCity>(entityName: "EntityCity")
+        let predicate = NSPredicate(format: "%@ == %K", argumentArray: [nameCity, "name"])
+        fetch.predicate = predicate
+        
+        do {
+            guard (try viewContext.fetch(fetch).first) != nil else {
+                let newCity = EntityCity(context: viewContext)
+                newCity.name = nameCity
+                saveContext()
+                return
+            }
+        }catch let error {
+            print(error)
+        }
     }
     
     func retriveData(completion: (Result<[EntityCity], Error>) -> Void) {
         let fetchRequest = NSFetchRequest<EntityCity>(entityName: "EntityCity")
-        
+
         do{
             let cities = try viewContext.fetch(fetchRequest)
             completion(.success(cities))
@@ -44,14 +56,24 @@ final class StorageServiceImpl: StorageService {
     }
     
     func updateData() {
-        #warning("")
+        viewContext.refreshAllObjects()
     }
     
-    func deleteData(_ entity: EntityCity) {
-        viewContext.delete(entity)
-        saveContext()
+    func deleteData() {
+        //        viewContext.delete(entity)
+        //        saveContext()
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: EntityCity.fetchRequest())
+        do {
+            try viewContext.execute(deleteRequest)
+            saveContext()
+            return
+        } catch {
+            return
+        }
+        
+        
     }
-
+    
     // MARK: - Core Data Saving support
     func saveContext () {
         let context = persistentContainer.viewContext

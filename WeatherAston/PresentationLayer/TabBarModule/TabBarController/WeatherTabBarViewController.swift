@@ -16,7 +16,7 @@ final class WeatherTabBarViewController: UITabBarController {
     //MARK: - setupUI
     private func setupUI(){
         let factory = TabBarFactory()
-        let tabs = [factory.makeTabBar(.today), factory.makeTabBar(.favorites)]
+        let tabs = [factory.makeTabBar(.forecast), factory.makeTabBar(.cities)]
         setViewControllers(tabs, animated: false)
     }
 }
